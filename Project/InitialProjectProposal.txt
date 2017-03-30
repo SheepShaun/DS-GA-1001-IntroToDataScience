@@ -1,0 +1,28 @@
+Project Proposal:
+
+Problem Statement:
+Clustering of raw "20 Newsgroups" dataset and labelling the clusters using Wikipedia by PMI scores.
+
+Suprevised or unsuprevised:
+It is an unsupervised learning Alogrithm
+
+The Dataset:
+As mentioned above we would be using "20 Newsgroups" dataset available at http://qwone.com/~jason/20Newsgroups/
+
+Instance in the Data:
+Each data point is a document.First few lines from a sample Document:
+From: sd345@city.ac.uk (Michael Collier)
+Subject: Converting images to HP LaserJet III?
+Nntp-Posting-Host: hampton
+Organization: The City University
+
+Attributes of Interest:
+As is the norm with text data, we can use Bag-of-words representaion for the documents, where each word is a feature.
+The value of the feature can be one of the following:
+1. number times the wor appears in the document
+2. a better feature would be the frequency with which the word appears in a particular document.
+3. tfidf
+4. n-grams
+
+
+
