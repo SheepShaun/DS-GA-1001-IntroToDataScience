@@ -1,25 +1,31 @@
 Project Proposal:
 
 Problem Statement:
-Clustering of raw "20 Newsgroups" dataset and labelling the clusters using Wikipedia by PMI scores.
+Predict book ratings from given review text
 
 Suprevised or unsuprevised:
-It is an unsupervised learning Alogrithm
+It is an supervised learning Alogrithm. We train the model on given training dataset and then use the trained model to make predictions.
 
 The Dataset:
-As mentioned above we would be using "20 Newsgroups" dataset available at http://qwone.com/~jason/20Newsgroups/
+We use "Amazon book reviews" dataset available at https://archive.ics.uci.edu/ml/datasets/Amazon+book+reviews#
 
 Instance in the Data:
-Each data point is a document.First few lines from a sample Document:
-From: sd345@city.ac.uk (Michael Collier)
-Subject: Converting images to HP LaserJet III?
-Nntp-Posting-Host: hampton
-Organization: The City University
+Each entry is separated by a newline character ('\n'). Each entry contains four attributes, which are separated by a space ('\t'): 
+1. review score 
+2. tail of review url 
+3. review title 
+4. HTML of review text
+
+An Instance of Data:
+5.0\t/gp/customer-reviews/RT3R8XN5KZZGW?ASIN=1491590173\tExcellent Story\t"<span class=""a-size-base review-text"">Follow the adventure of an astronaut as he tries to survive being left on Mars.<br/>During a mission abort of the Ares 3 Mars landing, astronaut Mark Watney is thought dead as the rest of the crew does an emergency evacuation from the surface of Mars. Follow Mark as he fights to survive on a planet that really doesn't like living things.<br/>The author, Andy Weir, wrote this over a long period of time in a serial format and I waited patiently for every chapter. Now that it is complete it is even better. Thank you Andy.</span>"
+
+Target variable: Rating
+
 
 Attributes of Interest:
 As is the norm with text data, we can use Bag-of-words representaion for the documents, where each word is a feature.
 The value of the feature can be one of the following:
-1. number times the wor appears in the document
+1. number times the word appears in the document
 2. a better feature would be the frequency with which the word appears in a particular document.
 3. tfidf
 4. n-grams
